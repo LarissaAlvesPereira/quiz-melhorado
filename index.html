@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Mundo Animal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="quiz">
+    <header>
+      <div class="emoji">🦁 🐬 🦜</div>
+      <h1>Quiz Mundo Animal</h1>
+      <p>Teste seus conhecimentos sobre os animais!</p>
+    </header>
+
+    <section id="game">
+      <div class="info">
+        <span id="question-count">Pergunta 1 de 5</span>
+        <span id="score">Pontos: 0</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <p id="feedback" aria-live="polite"></p>
+
+      <button id="next-button" hidden>
+        Próxima pergunta →
+      </button>
+    </section>
+
+    <section id="result" hidden>
+      <div class="emoji">🏆</div>
+      <h2>Quiz concluído!</h2>
+      <p id="final-score"></p>
+      <p id="message"></p>
+      <button id="restart-button">Jogar novamente 🔄</button>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #183b32;
+    background: linear-gradient(135deg, #d9f99d, #a7f3d0);
+  }
+  
+  .quiz {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px #164e6330;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .emoji {
+    font-size: 48px;
+  }
+  
+  h1 {
+    color: #16845b;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    color: #64748b;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    height: 9px;
+    margin: 12px 0 25px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  #progress {
+    width: 0;
+    height: 100%;
+    background: #22c55e;
+    transition: width 0.3s;
+  }
+  
+  #question {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  
+  #options {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .option {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: #334155;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .option:hover:not(:disabled) {
+    background: #ecfdf5;
+    border-color: #22c55e;
+  }
+  
+  .option:disabled {
+    cursor: default;
+  }
+  
+  .option.correct {
+    background: #dcfce7;
+    border-color: #16a34a;
+  }
+  
+  .option.wrong {
+    background: #fee2e2;
+    border-color: #ef4444;
+  }
+  
+  #feedback {
+    min-height: 45px;
+    line-height: 1.5;
+    margin: 18px 0;
+    font-weight: bold;
+  }
+  
+  button:not(.option) {
+    padding: 14px 20px;
+    color: white;
+    background: #16845b;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:not(.option):hover {
+    background: #116b49;
+  }
+  
+  #next-button {
+    display: block;
+    margin-left: auto;
+  }
+  
+  #next-button[hidden],
+  #result[hidden] {
+    display: none;
+  }
+  
+  #result {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  #final-score {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 480px) {
+    .quiz {
+      padding: 20px;
+    }
+  
+    #question {
+      font-size: 19px;
+    }
+  
+    .option {
+      font-size: 15px;
+    }
+  }
+  
